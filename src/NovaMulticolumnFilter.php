@@ -16,6 +16,9 @@ class NovaMulticolumnFilter extends Filter
 
     protected $default_column_type = 'text';
 
+    protected $allowToAdd = true;
+    protected $allowToRemove = true;
+
     public function __construct($columns = null, $manual_update = null, $default_column_type = null, $name = null)
     {
         $this->columnsBox = $columns ?? $this->columnsBox;

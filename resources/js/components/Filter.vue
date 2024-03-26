@@ -13,11 +13,9 @@
                         @change="childChange"
                 >
                 </Column>
-                <div @click="removeColumn(index)" class="btn btn-block p-1 rounded ml-1 btn-danger close-button cursor-pointer">X</div>
             </div>
 
             <div class="p-2 nova-multicolumn-filter__buttons">
-                <div @click="addColumn" class="btn btn-default btn-primary cursor-pointer nova-multicolumn-filter__add">{{__('multicolumn.add')}}</div>
                 <div
                     v-if="manualUpdate"
                     @click="update"

@@ -9,16 +9,6 @@
             <option v-for="option in columns" :value="option.value">{{option.label}}</option>
         </select>
 
-        <select
-            v-if="columnType !== 'select' && columnType !== 'checkbox'"
-            class="w-full form-control form-select nova-multicolumn-filter__operator-select"
-            @change="handleChangeOperator"
-            :value="operator_"
-        >
-            <option value="">{{__('multicolumn.select_empty_label')}}</option>
-            <option v-for="option in operators" :value="option.value">{{option.label}}</option>
-        </select>
-
         <input
             v-if="columnType !== 'select' && columnType !== 'checkbox'"
             :type="columnType"
