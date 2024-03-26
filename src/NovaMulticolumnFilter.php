@@ -10,7 +10,7 @@ class NovaMulticolumnFilter extends Filter
 {
     public $component = 'nova-multicolumn-filter';
 
-    protected $columns = [];
+    protected $columnsBox = [];
 
     protected $manual_update = false;
 
@@ -18,7 +18,7 @@ class NovaMulticolumnFilter extends Filter
 
     public function __construct($columns = null, $manual_update = null, $default_column_type = null, $name = null)
     {
-        $this->columns = $columns ?? $this->columns;
+        $this->columnsBox = $columns ?? $this->columnsBox;
         $this->manual_update = $manual_update ?? $this->manual_update;
         $this->default_column_type = $default_column_type ?? $this->default_column_type;
         $this->name = $name;
@@ -78,7 +78,7 @@ class NovaMulticolumnFilter extends Filter
     private function getOptions()
     {
         $columns = [];
-        foreach ($this->columns as $column => $value) {
+        foreach ($this->columnsBox as $column => $value) {
             if (is_string($value)) {
                 $value = [];
             }
